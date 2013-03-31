@@ -60,15 +60,20 @@ things that it needs is the start and end date in a milliseconds timestamp.
 
 those should go in the START and END columns of the database
 
-    public static final String START = "start";
-    public static final String END = "end";
+    values.put(CalendarProvider.END, endTimestamp));
+    values.put(CalendarProvider.START, startTimestamp);
     
 You also need to get the julian start/end day from the timestamp like so
 
     int startDay = Time.getJulianDay(startTimestamp, TimeUnit.MILLISECONDS.toSeconds(tz.getOffset(startTimestamp)));
     int endDay = Time.getJulianDay(endTimestamp, TimeUnit.MILLISECONDS.toSeconds(tz.getOffset(endTimestamp)));
     
-the put them in the START_DAY and END_DAY columns of the database
+the put them in the start day and end day columns of the database
 
     values.put(CalendarProvider.START_DAY, startDay);
     values.put(CalendarProvider.END_DAY, endDay);
+    
+The last thing you need in the database is the start/end time in minutes and put them in the start time and end time columns
+
+    values.put(CalendarProvider.START_TIME, startMin);
+    values.put(CalendarProvider.END_TIME, endMin);
