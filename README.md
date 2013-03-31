@@ -12,4 +12,17 @@ A quick run though of how to use it:
 
 in your activity before you set the content view you need to create a Calendar Controller
 
-    mController = CalendarController.getInstance(this);
+    public class MainActivity extends Activity implements EventHandler{
+    
+	private CalendarController mController;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		mController = CalendarController.getInstance(this);
+		setContentView(R.layout.cal_layout);
+        mController.registerEventHandler(R.id.cal_frame, (EventHandler) monthFrag);
+        
+        mController.registerFirstEventHandler(0, this);
+	}
