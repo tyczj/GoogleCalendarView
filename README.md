@@ -56,3 +56,19 @@ Calendar Content Provider
 =========================
 
 To display events on the calendar I have build a content provider that the calendar uses which replicates how it is done in googles calendar app.
+things that it needs is the start and end date in a milliseconds timestamp.
+
+those should go in the START and END columns of the database
+
+    public static final String START = "start";
+    public static final String END = "end";
+    
+You also need to get the julian start/end day from the timestamp like so
+
+    int startDay = Time.getJulianDay(startTimestamp, TimeUnit.MILLISECONDS.toSeconds(tz.getOffset(startTimestamp)));
+    int endDay = Time.getJulianDay(endTimestamp, TimeUnit.MILLISECONDS.toSeconds(tz.getOffset(endTimestamp)));
+    
+the put them in the START_DAY and END_DAY columns of the database
+
+    values.put(CalendarProvider.START_DAY, startDay);
+    values.put(CalendarProvider.END_DAY, endDay);
