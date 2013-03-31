@@ -26,3 +26,27 @@ in your activity before you set the content view you need to create a Calendar C
         
         mController.registerFirstEventHandler(0, this);
 	}
+	
+The put in the MonthByWeekFragment to your view
+
+    FragmentTransaction ft = getFragmentManager().beginTransaction();
+				
+	monthFrag = new MonthByWeekFragment(System.currentTimeMillis(), false);
+        ft.replace(R.id.cal_frame, monthFrag).commit();
+        
+You also need to override handleEvent, this gets called when you click on a day on the calendar and gets called when you click on an event in the day view
+
+    @Override
+	public void handleEvent(EventInfo event) {
+		if (event.eventType == EventType.GO_TO) {
+		// day selected on calendsr, start DayFragment to display the day that was clicked
+			this.event = event;
+			dayView = true;
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+				dayFrag = new DayFragment(event.startTime.toMillis(true),1);
+				ft.replace(R.id.cal_frame, dayFrag).addToBackStack(null).commit();
+		}if(event.eventType == EventType.VIEW_EVENT){
+			//TODO do something when an event is clicked	
+		}
+		
+	}
