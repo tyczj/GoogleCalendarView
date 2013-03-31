@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="Nminutes">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">1 minute</item>
+    </plurals>
+    <plurals name="Nmins">
+        <item quantity="other">%d mins</item>
+        <item quantity="one">1 min</item>
+    </plurals>
+    <plurals name="Nhours">
+        <item quantity="other">%d hours</item>
+        <item quantity="one">1 hour</item>
+    </plurals>
+    <plurals name="Ndays">
+        <item quantity="other">%d days</item>
+        <item quantity="one">1 day</item>
+    </plurals>
+    <plurals name="weekN">
+        <item quantity="other">WEEK %d</item>
+    </plurals>
+    <plurals name="month_more_events">
+        <item quantity="other">+%d</item>
+        <item quantity="one">+1</item>
+    </plurals>
+    <plurals name="Nevents">
+        <item quantity="other">%d events</item>
+        <item quantity="one">1 event</item>
+    </plurals>
+    <plurals name="N_remaining_events">
+        <item quantity="other">+%d events</item>
+        <item quantity="one">+1 event</item>
+    </plurals>
+</resources>

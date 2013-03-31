@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CalendarView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="agenda_today">TODAY, %1$s</string>
+    <string name="agenda_yesterday">YESTERDAY, %1$s</string>
+    <string name="agenda_tomorrow">TOMORROW, %1$s</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="today_at_time_fmt">Today at %s</string>
+    <string name="tomorrow_at_time_fmt">Tomorrow at %s</string>
+    <string name="date_time_fmt" formatted="false">%s, %s</string>
+    <string name="no_title_label">(No title)</string>
+    <string name="event_create">"New event"</string>
+    <string name="day_view_new_event_hint">+ New event</string>
+	<string name="new_event_dialog_label">"New event"</string>
+	<string name="new_event_dialog_option">"New event"</string>
+	<string name="template_announce_item_index">Event</string>
+
+</resources>
