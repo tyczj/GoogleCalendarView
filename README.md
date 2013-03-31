@@ -55,4 +55,4 @@ You also need to override handleEvent, this gets called when you click on a day 
 Calendar Content Provider
 =========================
 
-
+To display events on the calendar I have build a content provider that the calendar uses which replicates how it is done in googles calendar app.
