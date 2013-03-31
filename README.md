@@ -12,4 +12,4 @@ A quick run though of how to use it:
 
 in your activity before you set the content view you need to create a Calendar Controller
 
-mController = CalendarController.getInstance(this);
+    mController = CalendarController.getInstance(this);
