@@ -1,6 +1,8 @@
 ExtendedCalendarView
 ====================
 
+![image](https://github.com/tyczj/ExtendedCalendarView/raw/master/ExtendedCalendarView.png)
+
 This project is meant for people who want to display a calendar view and show that there are events on certain days.
 What I did was pull out the calendar view from Google's Calendar application found here. It is still a work in progress but the project should run. The example project pulls events from the google calendar provider and inserts them into the examples database
 
