@@ -79,3 +79,6 @@ The last thing you need in the database is the start/end time in minutes and put
 
     values.put(CalendarProvider.START_TIME, startMin);
     values.put(CalendarProvider.END_TIME, endMin);
+    
+Follow me on Google+
+https://plus.google.com/107013202469298721562/posts
